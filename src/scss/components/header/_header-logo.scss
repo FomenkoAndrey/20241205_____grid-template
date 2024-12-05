@@ -1,2 +1,17 @@
-@use "../../presets" as *;
-@use "../../mixins" as *;
+@use '../../presets' as *;
+@use '../../mixins' as *;
+
+.header-logo {
+  &__link {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 0.22em;
+  }
+
+  &__accent {
+    display: inline-block;
+    border: 3px solid $color-highlight;
+    padding: 14px 1px 13px 5px;
+    margin-right: 4px;
+  }
+}

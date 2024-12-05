@@ -1,5 +1,5 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .header-content {
   position: relative;
@@ -10,8 +10,9 @@
   }
 
   &__title {
-    text-align: center;
     margin: 0 0 53px 0;
+
+    text-align: center;
   }
 
   &__actions {

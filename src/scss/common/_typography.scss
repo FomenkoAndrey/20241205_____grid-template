@@ -1,5 +1,5 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 *,
 *::before,
@@ -9,31 +9,33 @@
 
 html {
   overflow-y: scroll;
+
   font-family: $font-main;
   font-size: $font-size;
 }
 
 body {
-  background-color: $color-white;
   color: $color-gray;
+  background-color: $color-white;
 }
 
 h1 {
-  font-size: 3.75rem;
   letter-spacing: 0.078em;
+
   color: $color-white;
+
+  font-family: $font-header;
+  font-size: 3.75rem;
   font-weight: 300;
   line-height: 1.2em;
-  font-family: $font-header;
 }
 
-h2 {
-}
 
-h3 {
-}
+
+
 
 a {
   text-decoration: none;
+
   color: $color-white;
 }

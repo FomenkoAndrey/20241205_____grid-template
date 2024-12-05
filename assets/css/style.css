@@ -170,17 +170,17 @@ html{
 }
 
 body{
-  background-color:#ffffff;
   color:#637588;
+  background-color:#ffffff;
 }
 
 h1{
-  font-size:3.75rem;
   letter-spacing:0.078em;
   color:#ffffff;
+  font-family:"Roboto Slab", serif;
+  font-size:3.75rem;
   font-weight:300;
   line-height:1.2em;
-  font-family:"Roboto Slab", serif;
 }
 
 a{
@@ -201,13 +201,13 @@ a{
   min-width:250px;
   min-height:60px;
   padding:0.5em 1em;
-  background-color:rgba(255, 255, 255, 0.1);
-  border:2px solid #ffffff;
-  font-size:18px;
-  letter-spacing:2px;
-  color:#ffffff;
   -webkit-transition:background-color 0.3s;
   transition:background-color 0.3s;
+  letter-spacing:2px;
+  color:#ffffff;
+  border:2px solid #ffffff;
+  background-color:rgba(255, 255, 255, 0.1);
+  font-size:18px;
 }
 .btn:hover, .btn:focus{
   background-color:#d66926;
@@ -215,15 +215,15 @@ a{
 
 .header{
   position:relative;
-  padding:150px 0;
+  display:grid;
+  -ms-flex-line-pack:center;
+      align-content:center;
   min-height:100vh;
+  padding:150px 0;
   background-color:#2d3651;
   background-image:url(../images/img-header.png);
   background-position:50% 50%;
   background-size:cover;
-  display:grid;
-  -ms-flex-line-pack:center;
-      align-content:center;
 }
 
 .header-content{
@@ -231,8 +231,8 @@ a{
   z-index:1;
 }
 .header-content__title{
-  text-align:center;
   margin:0 0 53px 0;
+  text-align:center;
 }
 .header-content__actions{
   display:-webkit-box;
@@ -257,45 +257,46 @@ a{
   -webkit-box-align:center;
       -ms-flex-align:center;
           align-items:center;
-  grid-template-columns:auto 1fr;
   gap:20px;
+  grid-template-columns:auto 1fr;
 }
 
 .header-logo__link{
   display:block;
-  font-size:1.5rem;
   letter-spacing:0.22em;
+  font-size:1.5rem;
 }
 .header-logo__accent{
   display:inline-block;
-  border:3px solid #d53d27;
-  padding:14px 1px 13px 5px;
   margin-right:4px;
+  padding:14px 1px 13px 5px;
+  border:3px solid #d53d27;
 }
 
 .header-navbar__list{
-  margin:0 -10px 0 0;
-  padding:0;
-  list-style:none;
   display:grid;
   -webkit-box-pack:end;
       -ms-flex-pack:end;
           justify-content:end;
+  gap:20px;
   grid-template-columns:repeat(auto-fit, minmax(40px, -webkit-max-content));
   grid-template-columns:repeat(auto-fit, minmax(40px, max-content));
-  gap:20px;
+  margin:0 -10px 0 0;
+  padding:0;
+  list-style:none;
 }
 .header-navbar__link{
   display:block;
   padding:20px 10px;
   -webkit-transition:color 0.3s;
   transition:color 0.3s;
-  font-size:1.125rem;
   letter-spacing:0.09em;
+  font-size:1.125rem;
 }
 .header-navbar__link:hover, .header-navbar__link:focus{
   color:#d66926;
 }
+
 .header-overlay{
   background-color:rgba(45, 54, 81, 0.8);
   position:absolute;

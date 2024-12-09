@@ -1,6 +1,6 @@
 const originalWrite = process.stderr.write // Перехоплюємо потоки stdout та stderr
 
-process.stderr.write = function (chunk, ...args) {
+process.stderr.write = function(chunk, ...args) {
   const ignoreMessages = [
     'The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0',
     '[DEP0180] DeprecationWarning: fs.Stats constructor is deprecated'
@@ -32,7 +32,7 @@ const option = process.argv[3]
 
 const PATH = {
   scssFolder: './src/scss/',
-  scssAllFiles: ['./src/scss/**/*.scss', '!**/_mixins-media.scss'], // Виключаємо _mixins-media.scss
+  scssAllFiles: ['./src/scss/**/*.scss', '!**/_mixins-media.scss', '!**/_variables.scss', '!**/_skins.scss'], // Виключаємо _mixins-media.scss
   scssRootFile: './src/scss/style.scss',
   pugFolder: './src/templates/',
   pugAllFiles: './src/templates/**/*.pug',

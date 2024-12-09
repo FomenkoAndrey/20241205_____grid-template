@@ -25,14 +25,27 @@ h1 {
   color: $color-white;
 
   font-family: $font-header;
-  font-size: 3.75rem;
   font-weight: 300;
   line-height: 1.2em;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
 }
 
+h2 {
+  font-family: $font-header;
+}
 
-
-
+h3 {
+  font-family: $font-header;
+}
 
 a {
   text-decoration: none;

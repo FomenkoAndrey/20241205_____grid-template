@@ -12,16 +12,17 @@
       @include unlist(0 (-$gap-sm) 0 0);
     }
     @include md {
-      display: none;
-
       position: absolute;
       top: 100%;
       right: $gap;
 
-      background-color: rgba($color-gray-dark, 0.5);
-      backdrop-filter: blur(3px);
+      display: none;
+
       text-align: right;
 
+      background-color: rgba($color-gray-dark, 0.5);
+
+      backdrop-filter: blur(3px);
       @include unlist;
       @include box-shadow;
     }

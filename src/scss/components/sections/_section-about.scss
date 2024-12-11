@@ -1,0 +1,88 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.about {
+  background-color: $color-gray-light;
+
+  @extend %section;
+
+  &__container {
+    display: grid;
+
+    @extend %container;
+    @include lg-min {
+      gap: $gap-x5;
+      grid-template-columns: 1fr 271px;
+    }
+    @include lg-md {
+      gap: $gap-x3;
+      grid-template-columns: 1fr 255px;
+    }
+    @include md-sm {
+      gap: $gap-x2;
+      grid-template-columns: 1fr 175px;
+    }
+  }
+
+  &__content {
+    @include md {
+      margin-bottom: $gap-x2;
+    }
+  }
+
+  &__description {
+    position: relative;
+
+    text-align: justify;
+    letter-spacing: 0.05em;
+
+    line-height: 1.333333em;
+
+    @include md-min {
+      font-size: 1.125rem;
+    }
+    @include sm-min {
+      &::before {
+        position: absolute;
+        top: 5px;
+
+        width: 1px;
+        height: 50%;
+        min-height: 200px;
+
+        content: "";
+
+        background-color: rgba($color-gray, 0.5);
+
+        @include lg-min {
+          right: -$gap * 2.5;
+        }
+        @include lg-md {
+          right: -$gap * 1.5;
+        }
+        @include md-sm {
+          right: -$gap;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    text-align: center;
+
+    @include md-sm {
+      margin-top: $gap-x4;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+
+    @include sm-min {
+      max-height: 488px;
+    }
+    @include sm {
+      max-height: 400px;
+    }
+  }
+}

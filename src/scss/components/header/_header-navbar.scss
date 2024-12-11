@@ -4,7 +4,7 @@
 .header-navbar {
   &__list {
     @include md-min {
-      display: grid;
+      display: grid !important;
       justify-content: end;
 
       gap: $gap;
@@ -13,18 +13,40 @@
     }
     @include md {
       display: none;
+
+      position: absolute;
+      top: 100%;
+      right: $gap;
+
+      background-color: rgba($color-gray-dark, 0.5);
+      backdrop-filter: blur(3px);
+      text-align: right;
+
+      @include unlist;
+      @include box-shadow;
+    }
+  }
+
+  &__item {
+    @include md {
+      margin: $gap;
     }
   }
 
   &__link {
     display: block;
 
-    padding: $gap $gap-sm;
-
     transition: color 0.3s;
     letter-spacing: 0.09em;
 
     font-size: 1.125rem;
+
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+    @include md {
+      padding: $gap-sm $gap;
+    }
 
     &:hover,
     &:focus {

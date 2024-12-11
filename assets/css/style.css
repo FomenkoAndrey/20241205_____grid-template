@@ -297,7 +297,6 @@ a{
 }
 .header-navbar__link{
   display:block;
-  padding:20px 10px;
   -webkit-transition:color 0.3s;
   transition:color 0.3s;
   letter-spacing:0.09em;
@@ -553,7 +552,7 @@ a{
 
 @media (768px <= width){
   .header-navbar__list{
-    display:grid;
+    display:grid !important;
     -webkit-box-pack:end;
         -ms-flex-pack:end;
             justify-content:end;
@@ -563,6 +562,9 @@ a{
     margin:0 -10px 0 0;
     padding:0;
     list-style:none;
+  }
+  .header-navbar__link{
+    padding:20px 10px;
   }
   .header-navbar__btn{
     display:none;
@@ -601,8 +603,31 @@ a{
   .header-content__title{
     margin:0 0 33px 0;
   }
+  .header-menu{
+    background-color:rgba(68, 89, 110, 0.25);
+    -webkit-box-shadow:-3px 3px 20px -10px #000000;
+            box-shadow:-3px 3px 20px -10px #000000;
+  }
   .header-navbar__list{
     display:none;
+    position:absolute;
+    top:100%;
+    right:20px;
+    background-color:rgba(68, 89, 110, 0.5);
+    -webkit-backdrop-filter:blur(3px);
+            backdrop-filter:blur(3px);
+    text-align:right;
+    margin:0;
+    padding:0;
+    list-style:none;
+    -webkit-box-shadow:-3px 3px 20px -10px #000000;
+            box-shadow:-3px 3px 20px -10px #000000;
+  }
+  .header-navbar__item{
+    margin:20px;
+  }
+  .header-navbar__link{
+    padding:10px 20px;
   }
   .skill-item__title{
     font-size:1.125rem;

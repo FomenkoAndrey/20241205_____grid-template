@@ -171,7 +171,24 @@
     </section>
 
     <!-- subscribe -->
-    <section></section>
+    <section class="subscribe">
+      <div class="subscribe__container">
+        <h2 class="subscribe__title visually-hidden">Subscribe to our newsletter</h2>
+        <form class="subscribe__form" action="/url" method="POST" novalidate>
+          <div class="subscribe-item">
+            <label class="subscribe-item__label visually-hidden" for="name">Name</label>
+            <input class="subscribe-item__control" id="name" placeholder="User name" required type="text">
+          </div>
+          <div class="subscribe-item">
+            <label class="subscribe-item__label visually-hidden" for="email">Email</label>
+            <input class="subscribe-item__control" id="email" placeholder="User email" required type="email">
+          </div>
+          <div class="subscribe-item">
+            <button class="subscribe-item__btn">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <!-- posts -->
     <section></section>

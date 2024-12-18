@@ -3,10 +3,8 @@
 
 .subscribe {
   padding: $gap-lg 0;
-  background-color: $color-primary;
 
-  //  TODO: remove later
-  margin-bottom: 200px;
+  background-color: $color-primary;
 
   &__container {
     @extend %container;
@@ -14,8 +12,8 @@
 
   &__form {
     display: grid;
-    gap: $gap;
 
+    gap: $gap;
     @include md-min {
       grid-template-columns: repeat(3, 1fr);
     }

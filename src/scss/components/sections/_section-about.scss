@@ -25,7 +25,7 @@
   }
 
   &__content {
-    @include md {
+    @include sm {
       margin-bottom: $gap-x2;
     }
   }
@@ -46,13 +46,13 @@
         position: absolute;
         top: 5px;
 
-        width: 1px;
+        width: 2px;
         height: 50%;
         min-height: 200px;
 
         content: "";
 
-        background-color: rgba($color-gray, 0.5);
+        background-color: rgba($color-gray, 0.1);
 
         @include lg-min {
           right: -$gap * 2.5;
